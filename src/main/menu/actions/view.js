@@ -23,13 +23,13 @@ const toggleLayout = (win, type) => {
 }
 
 export const debugToggleDevTools = win => {
-  if (win && global.MARKTEXT_DEBUG) {
+  if (win) {
     win.webContents.toggleDevTools()
   }
 }
 
 export const debugReloadWindow = win => {
-  if (win && global.MARKTEXT_DEBUG) {
+  if (win) {
     ipcMain.emit('window-reload-by-id', win.id)
   }
 }

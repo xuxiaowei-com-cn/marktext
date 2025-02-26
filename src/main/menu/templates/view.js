@@ -74,25 +74,23 @@ export default function (keybindings) {
     }]
   }
 
-  if (global.MARKTEXT_DEBUG) {
-    viewMenu.submenu.push({
-      type: 'separator'
-    })
-    viewMenu.submenu.push({
-      label: 'Show Developer Tools',
-      accelerator: keybindings.getAccelerator('view.toggle-dev-tools'),
-      click (item, win) {
-        actions.debugToggleDevTools(win)
-      }
-    })
-    viewMenu.submenu.push({
-      label: 'Reload window',
-      accelerator: keybindings.getAccelerator('view.dev-reload'),
-      click (item, focusedWindow) {
-        actions.debugReloadWindow(focusedWindow)
-      }
-    })
-  }
+  viewMenu.submenu.push({
+    type: 'separator'
+  })
+  viewMenu.submenu.push({
+    label: 'Show Developer Tools',
+    accelerator: keybindings.getAccelerator('view.toggle-dev-tools'),
+    click (item, win) {
+      actions.debugToggleDevTools(win)
+    }
+  })
+  viewMenu.submenu.push({
+    label: 'Reload window',
+    accelerator: keybindings.getAccelerator('view.dev-reload'),
+    click (item, focusedWindow) {
+      actions.debugReloadWindow(focusedWindow)
+    }
+  })
 
   return viewMenu
 }
