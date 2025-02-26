@@ -59,9 +59,9 @@ export default function () {
         actions.showTweetDialog(win, 'twitter')
       }
     }, {
-      label: 'Report Issue or Request Feature...',
+      label: 'MacBook M4 Report Issue or Request Feature...',
       click () {
-        shell.openExternal('https://github.com/marktext/marktext/issues')
+        shell.openExternal('https://github.com/xuxiaowei-com-cn/marktext/issues/2')
       }
     }, {
       type: 'separator'
